@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an account | PDM</title>
+    <script
+      src="https://kit.fontawesome.com/45fb778009.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form novalidate>
+      <div class="container-cards">
+        <div class="cards">
+          <img src="pdmlogo.png" alt="Logo" />
+          <h2>
+            PAMBAYANG DALUBHASAAN<br /><span class="highlight-txt"
+              >NG MARILAO</span
+            >
+          </h2>
+          <h2 class="create-txt">CREATE AN ACCOUNT</h2>
+          <p class="txt">Please fill in the details to sign up</p>
+          <div class="input-container">
+            <p>Full Name:</p>
+            <div class="name_icon">
+              <i class="fa-regular fa-user fa-xl icon"></i>
+              <input
+                type="text"
+                name="name"
+                class="name-container"
+                placeholder="Enter your Full Name"
+              />
+            </div>
+            <p>Email Address:</p>
+            <div class="email_icon">
+              <i class="fa-regular fa-envelope fa-xl icon"></i>
+              <input
+                type="email"
+                name="email"
+                class="email-container"
+                placeholder="Enter your Mail"
+              />
+            </div>
+            <p>Password:</p>
+            <div class="pwd_icon">
+              <i class="fa-solid fa-lock fa-xl icon"></i>
+              <input
+                type="password"
+                name="pwd"
+                class="pwd-container"
+                placeholder="Enter your Password"
+              />
+            </div>
+            <button class="signup-btn">SIGN UP</button>
+          </div>
+          <div class="login-section">
+            <hr class="horizontal" />
+            <p class="login-text">
+              Already have an account?
+              <a href="Login.html" class="login-link">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

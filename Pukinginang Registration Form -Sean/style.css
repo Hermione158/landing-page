@@ -1,0 +1,400 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #180E06;
+}
+
+/* MAIN CONTAINERS (Centers the forms) */
+.container-cards-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 120px auto 0 auto;
+    border: 1px solid #b07704;
+    width: 90%;
+    max-width: 480px;
+    min-height: 750px;
+    border-radius: 15px;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px auto 0 auto;
+    border: 1px solid #b07704;
+    width: 90%;
+    max-width: 480px;
+    min-height: 800px;
+    border-radius: 15px;
+}
+
+/* INNER CARD WRAPPERS (Expands structure) */
+.cards-login,
+.cards {
+    width: 100%;
+    padding: 0 25px;
+}
+
+/* IMAGES */
+.cards-login .login-image {
+    border-radius: 50%;
+    width: 140px;
+    margin-top: -10px;
+}
+
+.cards img {
+    border-radius: 50%;
+    width: 140px;
+    margin-top: -30px;
+}
+
+/* TYPOGRAPHY */
+.cards-login h2,
+.cards h2 {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.cards-login .create-txt-login {
+    margin-top: 25px;
+    font-size: 23px;
+}
+
+.cards .create-txt {
+    margin-top: 18px;
+    font-size: 23px;
+}
+
+.highlight-txt {
+    color: #FFA500;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #FFA500;
+}
+
+.txt-login {
+    color: rgb(169, 167, 167);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.cards .txt {
+    color: rgb(148, 147, 147);
+}
+
+/* INPUT COLUMNS */
+.input-container-login,
+.input-container {
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 25px;
+    margin-left: 0;
+    width: 100%;
+}
+
+.input-container-login p,
+.input-container p {
+    margin-top: 15px;
+}
+
+/* ICONS & TEXT BOXES */
+.name_icon,
+.email_icon_login,
+.email_icon,
+.pwd_icon_login,
+.pwd_icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.name_icon .icon,
+.email_icon_login .icon-login,
+.email_icon .icon,
+.pwd_icon_login .icon-login,
+.pwd_icon .icon {
+    position: absolute;
+    left: 15px;
+    color: #FFA500;
+}
+
+/* Dynamically fills the card and keeps padding inside */
+.name-container,
+.email-container,
+.pwd-container,
+.email-container-login,
+.pwd-container-login {
+    width: 100%;
+    padding: 12px 15px 15px 60px;
+    background: transparent;
+    border: 1px solid #b07704;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 7. BUTTONS & LINKS */
+.forgot-pwd-container-login button {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 270px;
+    color: #FFA500;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.signup-btn-login,
+.signup-btn {
+    margin-top: 28px;
+    border: none;
+    background: #FFA500;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login-section {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.horizontal {
+    border: none;
+    border-top: 1px solid #8e6003;
+    margin-bottom: 25px;
+}
+
+.login-text {
+    color: white;
+    font-size: 17px;
+}
+
+.login-link {
+    color: #fca503;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS (Phones/Tablets) */
+@media (max-width: 768px) {
+
+    .container-cards,
+    .container-cards-login {
+        margin: 60px auto 0 auto;
+        width: 90%;
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .cards img,
+    .cards-login .login-image {
+        width: 100px;
+        margin-top: -50px;
+    }
+
+    .cards h2,
+    .cards-login h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cards .create-txt,
+    .cards-login .create-txt-login {
+        font-size: 18px;
+    }
+
+    .input-container,
+    .input-container-login {
+        margin-top: 15px;
+    }
+}
+/* ============================================================
+   JAVASCRIPT UI STATES (validation, password toggle, banners)
+   ============================================================ */
+
+/* Inline field errors */
+.field-error {
+    display: none;
+    color: #ff8a7a;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+
+.field-error.is-visible {
+    display: block;
+}
+
+input.is-invalid {
+    border-color: #ff8a7a;
+}
+
+/* Password strength note */
+.pwd-strength {
+    display: none;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+
+.pwd-strength.is-visible {
+    display: block;
+}
+
+.pwd-strength.weak {
+    color: #ff8a7a;
+}
+
+.pwd-strength.fair {
+    color: #ffc85c;
+}
+
+.pwd-strength.strong {
+    color: #7fd18a;
+}
+
+/* Show / hide password button */
+.toggle-pwd {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    padding: 6px;
+    color: #b07704;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.toggle-pwd:hover,
+.toggle-pwd:focus-visible {
+    color: #FFA500;
+}
+
+.pwd-container,
+.pwd-container-login {
+    padding-right: 45px;
+}
+
+/* Form-wide message banner */
+.form-banner {
+    display: none;
+    width: 90%;
+    max-width: 480px;
+    margin: 20px auto -10px auto;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.form-banner.is-visible {
+    display: block;
+}
+
+.form-banner.error {
+    color: #ff8a7a;
+    border-color: #a8412f;
+    background: rgba(168, 65, 47, 0.15);
+}
+
+.form-banner.success {
+    color: #7fd18a;
+    border-color: #3f7a49;
+    background: rgba(63, 122, 73, 0.15);
+}
+
+.form-banner.info {
+    color: #ffc85c;
+    border-color: #8e6003;
+    background: rgba(142, 96, 3, 0.15);
+}
+
+/* Disabled buttons while redirecting */
+.signup-btn:disabled,
+.signup-btn-login:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Keyboard focus */
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #FFA500;
+    outline-offset: 2px;
+}
+
+/* ---------- Dashboard ---------- */
+.account-card {
+    width: 100%;
+    padding: 40px 25px;
+}
+
+.account-card .profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFA500;
+}
+
+.account-name {
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.account-email {
+    color: rgb(169, 167, 167);
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.account-note {
+    color: rgb(148, 147, 147);
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 25px;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    border: 1px solid #b07704;
+    background: transparent;
+    color: #FFA500;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 165, 0, 0.1);
+}
