@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #180E06;
+}
+
+/* MAIN CONTAINERS (Centers the forms) */
+.container-cards-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 120px auto 0 auto;
+    border: 1px solid #b07704;
+    width: 90%;
+    max-width: 480px;
+    min-height: 750px;
+    border-radius: 15px;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px auto 0 auto;
+    border: 1px solid #b07704;
+    width: 90%;
+    max-width: 480px;
+    min-height: 800px;
+    border-radius: 15px;
+}
+
+/* INNER CARD WRAPPERS (Expands structure) */
+.cards-login,
+.cards {
+    width: 100%;
+    padding: 0 25px;
+}
+
+/* IMAGES */
+.cards-login .login-image {
+    border-radius: 50%;
+    width: 140px;
+    margin-top: -10px;
+}
+
+.cards img {
+    border-radius: 50%;
+    width: 140px;
+    margin-top: -30px;
+}
+
+/* TYPOGRAPHY */
+.cards-login h2,
+.cards h2 {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.cards-login .create-txt-login {
+    margin-top: 25px;
+    font-size: 23px;
+}
+
+.cards .create-txt {
+    margin-top: 18px;
+    font-size: 23px;
+}
+
+.highlight-txt {
+    color: #FFA500;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #FFA500;
+}
+
+.txt-login {
+    color: rgb(169, 167, 167);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.cards .txt {
+    color: rgb(148, 147, 147);
+}
+
+/* INPUT COLUMNS */
+.input-container-login,
+.input-container {
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 25px;
+    margin-left: 0;
+    width: 100%;
+}
+
+.input-container-login p,
+.input-container p {
+    margin-top: 15px;
+}
+
+/* ICONS & TEXT BOXES */
+.name_icon,
+.email_icon_login,
+.email_icon,
+.pwd_icon_login,
+.pwd_icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.name_icon .icon,
+.email_icon_login .icon-login,
+.email_icon .icon,
+.pwd_icon_login .icon-login,
+.pwd_icon .icon {
+    position: absolute;
+    left: 15px;
+    color: #FFA500;
+}
+
+/* Dynamically fills the card and keeps padding inside */
+.name-container,
+.email-container,
+.pwd-container,
+.email-container-login,
+.pwd-container-login {
+    width: 100%;
+    padding: 12px 15px 15px 60px;
+    background: transparent;
+    border: 1px solid #b07704;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    text-align: left;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 7. BUTTONS & LINKS */
+.forgot-pwd-container-login button {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 270px;
+    color: #FFA500;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.signup-btn-login,
+.signup-btn {
+    margin-top: 28px;
+    border: none;
+    background: #FFA500;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login-section {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.horizontal {
+    border: none;
+    border-top: 1px solid #8e6003;
+    margin-bottom: 25px;
+}
+
+.login-text {
+    color: white;
+    font-size: 17px;
+}
+
+.login-link {
+    color: #fca503;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS (Phones/Tablets) */
+@media (max-width: 768px) {
+
+    .container-cards,
+    .container-cards-login {
+        margin: 60px auto 0 auto;
+        width: 90%;
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    .cards img,
+    .cards-login .login-image {
+        width: 100px;
+        margin-top: -50px;
+    }
+
+    .cards h2,
+    .cards-login h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cards .create-txt,
+    .cards-login .create-txt-login {
+        font-size: 18px;
+    }
+
+    .input-container,
+    .input-container-login {
+        margin-top: 15px;
+    }
+}
