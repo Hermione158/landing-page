@@ -21,7 +21,7 @@ async function register(e) {
     
     if(response.ok) {
         // Redirect to Login upon successful account creation
-        window.location.href = "Login.html"; 
+        window.location.href = "index.html"; 
     }
   } catch (error) {
     alert("Cannot connect to server");
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutLink.addEventListener("click", (e) => {
       e.preventDefault(); // Stop the default link behavior
       localStorage.removeItem("token"); // Clear the session
-      window.location.href = "Login.html"; // Send back to login
+      window.location.href = "index.html"; // Send back to login
     });
   }
 });
