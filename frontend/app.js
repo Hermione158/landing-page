@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000";
+//const API_URL = "http://localhost:5000"
+const API_URL = "https://landing-page-o9gq.onrender.com"
 
 async function register(e) {
   e.preventDefault(); 
