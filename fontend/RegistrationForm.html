@@ -19,51 +19,59 @@
 
   <body>
     <form>
-      <div class="container-cards-login">
-        <div class="cards-login">
-          <img src="pdmlogo.png" alt="Logo" class="login-image" />
+      <div class="container-cards">
+        <div class="cards">
+          <img src="pdmlogo.png" alt="Logo" />
           <h2>
             PAMBAYANG DALUBHASAAN<br /><span class="highlight-txt"
               >NG MARILAO</span
             >
           </h2>
-          <h2 class="create-txt-login">WELCOME BACK</h2>
-          <p class="txt-login">Please log in to your account</p>
-          <div class="input-container-login">
+          <h2 class="create-txt">CREATE AN ACCOUNT</h2>
+          <p class="txt">Please fill in the details to sign up</p>
+          <div class="input-container">
+            <p>Full Name:</p>
+            <div class="name_icon">
+              <i class="fa-regular fa-user fa-xl icon"></i>
+              <input
+                type="text"
+                name="name"
+                class="name-container"
+                placeholder="Enter your Full Name"
+              />
+            </div>
             <p>Email Address:</p>
-            <div class="email_icon_login">
-              <i class="fa-regular fa-envelope fa-xl icon-login"></i>
+            <div class="email_icon">
+              <i class="fa-regular fa-envelope fa-xl icon"></i>
               <input
                 type="email"
                 name="email"
-                class="email-container-login"
+                class="email-container"
                 placeholder="Enter your Mail"
               />
-            </div><br>
+            </div>
             <p>Password:</p>
-            <div class="pwd_icon_login">
-              <i class="fa-solid fa-lock fa-xl icon-login"></i>
+            <div class="pwd_icon">
+              <i class="fa-solid fa-lock fa-xl icon"></i>
               <input
                 type="password"
                 name="pwd"
-                class="pwd-container-login"
+                class="pwd-container"
                 placeholder="Enter your Password"
               />
             </div>
-            <div class="forgot-pwd-container-login">
-                <button>Forgot Password?</button>
-            </div>
-            <button class="signup-btn-login">LOGIN</button>
+            <button class="signup-btn">SIGN UP</button>
           </div>
           <div class="login-section">
             <hr class="horizontal" />
             <p class="login-text">
-              Don't have an account?
-              <a href="RegistrationForm.html" target="_self" class="login-link">Signup</a>
+              Already have an account?
+              <a href="Login.html" class="login-link">Login</a>
             </p>
           </div>
         </div>
       </div>
     </form>
+    <script src="app.js"></script>
   </body>
 </html>
